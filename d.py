@@ -1,7 +1,7 @@
 from imageai.Prediction import ImagePrediction
 import os
 import time
-#计时
+import requests
 start = time.time()
  
 #当前路径 包含需要预测的图片，模型文件
