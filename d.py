@@ -36,11 +36,12 @@ predictions, probabilities = prediction.predictImage(os.path.join(execution_path
 end = time.time()
  
 #输出结果
+#输出结果
 for eachPrediction, eachProbability in zip(predictions, probabilities):
 	if probabilities > 0.6:
 		outlist[outnumber]=eachPrediction
 		outnumber+=1
-    print(eachPrediction," : ", eachProbability)
-    print (outlist)
- 
+	print(eachPrediction," : ", eachProbability)
+	print (outlist)
+
 print ("\ncost time:",end-start)
