@@ -39,9 +39,14 @@ end = time.time()
 #输出结果
 outlist={}
 outnumber=0
+zh_ch=0
 for eachPrediction, eachProbability in zip(predictions, probabilities):
 	if eachProbability>=0.6:
-		outlist[outnumber]=eachPrediction
+		r = requests.get("http://fanyi.youdao.com/translate",params={'doctype': 'json','type': 'AUTO','i':eachPrediction})
+		result = r.json()
+		zh_ch = result['translateResult'][0][0]["tgt"]
+		print(translate_result)
+		outlist[outnumber]=zh_ch
 		outnumber+=1
 	print(outlist)
 
