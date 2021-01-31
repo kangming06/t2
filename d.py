@@ -37,7 +37,7 @@ end = time.time()
  
 #输出结果
 #输出结果
-outlist=[]
+outlist={}
 outnumber=0
 for eachPrediction, eachProbability in zip(predictions, probabilities):
 	if eachProbability>=0.6:
