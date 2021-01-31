@@ -20,12 +20,12 @@ prediction = ImagePrediction()
 #prediction.setModelPath(os.path.join(execution_path, "inception_v3_weights_tf_dim_ordering_tf_kernels.h5"))
  
 #InceptionV3
-prediction.setModelTypeAsResNet()
-prediction.setModelPath(os.path.join(execution_path, "resnet50.h5"))
+#prediction.setModelTypeAsResNet()
+#prediction.setModelPath(os.path.join(execution_path, "resnet50.h5"))
  
 #DenseNet121
-#prediction.setModelTypeAsDenseNet()
-#prediction.setModelPath(os.path.join(execution_path, "DenseNet-BC-121-32.h5"))
+prediction.setModelTypeAsDenseNet()
+prediction.setModelPath(os.path.join(execution_path, "DenseNet-BC-121-32.h5"))
  
 prediction.loadModel()
  
