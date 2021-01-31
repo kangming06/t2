@@ -40,8 +40,11 @@ end = time.time()
 outlist=[]
 outnumber=0
 for eachPrediction, eachProbability in zip(predictions, probabilities):
+	if eachprobabilities>=0.6:
+		outlist[outnumber]=eachPrediction
+		outnumber+=1
 	print(eachPrediction," : ", eachProbability)
-	print (type(eachProbability))
-	print (type(eachPrediction))
+	print(outlist)
+
 
 print ("\ncost time:",end-start)
