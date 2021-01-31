@@ -21,7 +21,7 @@ prediction = ImagePrediction()
  
 #InceptionV3
 prediction.setModelTypeAsResNet()
-prediction.setModelPath(os.path.join(execution_path, "resnet50_imagenet_tf.2.0.h5"))
+prediction.setModelPath(os.path.join(execution_path, "resnet50_coco_best_v2.0.1.h5"))
  
 #DenseNet121
 #prediction.setModelTypeAsDenseNet()
