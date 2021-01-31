@@ -43,7 +43,6 @@ for eachPrediction, eachProbability in zip(predictions, probabilities):
 	if eachProbability>=0.6:
 		outlist[outnumber]=eachPrediction
 		outnumber+=1
-	print(eachPrediction," : ", eachProbability)
 	print(outlist)
 
 
