@@ -42,6 +42,7 @@ outnumber=0
 zh_ch=0
 for eachPrediction, eachProbability in zip(predictions, probabilities):
 	if eachProbability>=0.6:
+		eachPrediction=eachPrediction.replace('_',' ')
 		r = requests.get("http://fanyi.youdao.com/translate",params={'doctype': 'json','type': 'AUTO','i':eachPrediction})
 		result = r.json()
 		zh_ch = result['translateResult'][0][0]["tgt"]
